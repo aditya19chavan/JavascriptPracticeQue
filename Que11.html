@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+//write a function that takes an array of integers as input and removes any duplicate elements, returning a new array with only the unique elements
+const removeDuplicates = (arr) => {
+let newArr = [...new Set(arr)] 
+// console.log(newArr);
+return newArr
+}
+
+
+
+
+console.log(removeDuplicates([1, 2, 3, 2, 1, 4]));
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//Write a function tocalculate teh sum ofsquares oof all elements in an array. For example given the array[1, 2, 3], the should return 14 .
+const sumOfSquares = (arr) => {
+let sum = 0;
+for (let i = 0; i < arr.length; i++) {
+    sum += arr[i] * arr[i];
+    }
+    return sum;
+}
+
+console.log(sumOfSquares([1, 2, 3]));
+    </script>
+
+    <script>
+        //using reduce method
+const sumOfSquares1 = (arr) => {
+ return arr.reduce((accum, curElem) => (accum = accum + curElem * curElem), 0);
+}
+
+
+console.log(sumOfSquares1([1, 2, 3]));
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //Write a function to determine whether a given string is a palindrome or not.
+
+const isPalindrome = (str) => {
+     str = str.toLowerCase().replace(/\W/g,"");
+     let r_str = str.split("").reverse().join("")
+     console.log(r_str);
+     return str === r_str  ? true : false;
+}
+
+console.log(isPalindrome("A man, a plan, a canal, Panama"));
+    </script>
+
+    <script>
+        function isPalindrome1(str) {
+        str = str.toLowerCase().replace(/[\W_]/g, ""); // remove all non-word characters (everything except numbers and letters)
+        var rev_str = str.split("").reverse().join("")
+         console.log(rev_str)
+         if(str === rev_str)
+         {
+            console.log(true)
+         }else
+
+    console.log(false)
+}        
+console.log(isPalindrome("A man, a plan, a canal, Panama"));
+    </script>
+</body>
+</html>

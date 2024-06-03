@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Write a function that takes a number as input and returns the sum of its digits.
+const sumOfDigits = (number) => {
+ // Convert the number to a string to iterate over each digit
+    let numStr = number.toString();
+// Initialize sum to 0
+    let sum = 0;
+// Iterate over each character in the string
+for (let i = 0; i < numStr.length; i++) {
+    // Convert the character to a number and add it to the sum
+
+    sum = sum + parseInt(numStr[i]);
+}
+return sum;
+
+}
+
+          console.log(sumOfDigits(1234));
+
+    </script>
+    <script>
+        const sumofDigi = (number) => {
+            let numStr = number.toString();
+
+            let sum = 0;
+            for(let i = 0; i < numStr.length; i++) {
+                       sum = parseInt(numStr[i]);
+            }
+            return sum;
+        } 
+
+
+        console.log(sumOfDigits(1234));
+    </script>
+</body>
+</html>

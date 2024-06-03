@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//Write a function that takes a string as input and returns the count of vowels in that string.Consider 'a', 'e', 'i', 'o', 'u' as vowels (both lowercase and uppercase).
+const countVowels = (str) => {
+    let vowels = ['a', 'e', 'i', 'o', 'u'];
+
+    let arr = str.split('');
+    console.log(arr);
+
+
+    let count = 0;
+    for(let char of arr) {
+        if(vowels.includes(char.toLowerCase())) {
+            count++;
+        }
+    }
+    return count;
+}
+
+console.log(countVowels("Helloo world"));
+
+    </script>
+<!-- -------------------------------------------------------------------------------------------- -->
+<script>
+
+   // Method 2:
+
+const countVowels2 = (str) => {
+
+const vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'];
+  // Initialize a counter to 0
+let count = 0;
+
+// Loop through each character in the input string
+for(let i = 0; i < str.length; i++) {
+
+// Loop through each vowel in the vowels array
+for(let j = 0; j < vowels.length; j++) {
+    // Check if the current character is a vowel
+    if(str[i] === vowels[j]) {
+        // If it is, increment the counter
+        count++;
+          // Break the inner loop once a match is found
+          break;
+    }
+}
+
+}
+
+
+
+
+return count;
+}
+
+
+console.log(countVowels2("Helloo world"));
+
+
+</script>
+   
+</body>
+</html>

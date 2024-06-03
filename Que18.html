@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+// write a function to check if a character is uppercase or lowercase.
+
+const isUpeerCase = (char) => {
+    if (char.length !==1) {
+        return false;
+    }
+    return char === char.toUpperCase();
+}
+
+
+const isLowerCase = (char) => {
+    if (char.length !==1) {
+        return false;
+    }
+    return char === char.toLowerCase();
+}
+
+console.log(isUpeerCase("s"));
+console.log(isLowerCase("b"));
+    </script>
+
+    <script>
+//easy method:
+
+const isUpperCase1 = (char) => {
+    return char === char.toUpperCase();
+}
+
+
+console.log(isUpperCase1("B"));
+
+    </script>
+</body>
+</html>

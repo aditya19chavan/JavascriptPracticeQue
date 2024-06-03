@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//Write a function findMin that takes an array of numbers as input and returns the minimum value found in the array.
+
+const findMin = (arr) => {
+    let min = arr[0];
+    for (let i = 1; i < arr.length; i++) {
+        if (arr[i] < min) {
+            min = arr[i];
+        }
+      
+}
+return min;
+}
+console.log(findMin([1, 2, -3, -4, 5,]));
+console.log(findMin([5,10, 2, 8]));
+    </script>
+
+
+
+
+<script>
+    //Method 2:
+
+const findMin1 = (arr) => {
+    return Math.min(...arr);
+}
+console.log(findMin1([5,10, 2, 8]));
+</script>
+
+
+
+</body>
+</html>

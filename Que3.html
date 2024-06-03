@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+           //Write a function called countChar that takes two parameters: a string and a character to count. The function should return the number of times the spcified character appears in the string.
+                  
+
+function countChar(word, char) {
+    let count = 0;
+    for(let i = 0; i < word.length; i++) {
+        if(word[i] === char) {
+            count++;
+        }
+    }
+    return count;
+}
+
+console.log(countChar("hello world", "o")); // Output: 2
+    </script>
+
+
+<script>
+    //using the 
+
+
+
+    const countChar1 = (word, char) => {
+        word = word.toLowerCase();
+        char = char.toLowerCase();
+
+        totalCount = word.split("").reduce((accum, curChar) => {     //accum will combine the values curChar reads the letters 
+            if(curChar === char) {      // comapring the values 
+                accum++;
+            }
+            return accum;
+        }, 0);
+        return totalCount;
+    };
+
+    console.log(countChar1("MissIssippi", "I"));
+</script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //Write a function findMax that takes an array of numbers as input and returns the maximum number in the array.
+
+const findMax = (arr) => {
+       return Math.max(100,2,30,50)
+}
+console.log((findMax()));
+    </script>
+
+
+
+<script>
+
+    //prefer this method 
+const findMax1 = (arr) => {
+    return Math.max(...arr)  //we hav eused the spread operator
+}
+
+console.log(findMax1([1, 5, 3, 9, 2]));
+</script>
+
+<script>
+    // Method 3 => without using the Math.max()
+
+
+    const findMax2 = (arr) => {
+    if(arr.length ===  0) {
+        return null;
+    }
+
+    let maxNumber = arr[0];
+    for (let i = 0; i < arr.length; i++) {
+
+
+
+
+        
+        if (arr[i] > maxNumber) {
+            maxNumber = arr[i];
+        }
+    }
+    return maxNumber;
+
+    }
+
+    const numbers = [3, 1, 4, 1, 5, 99, 2, 6, 5, 3, 5];
+console.log(findMax2(numbers)); 
+
+</script>
+</body>
+</html>

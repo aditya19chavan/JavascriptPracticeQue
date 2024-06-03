@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//write a function called calculateMean that takes an array of numbers as input and returns the mean(average) of those numbers.
+
+const calculateMean = (arr) => {
+    if(arr.length === 0) {
+        return 0;
+    }
+
+    let sum = arr.reduce((accum, curElem) => accum + curElem, 0);
+    // console.log(sum);
+    return sum / arr.length;
+ };
+
+ console.log(calculateMean([1, 2, 3, 4, 5]));
+
+    </script>
+
+    <script>
+//method 2:
+        const calculateMean1 = (arr) => {
+            if(arr.length === 0) {
+                return 0;
+        }
+        let sum = 0;
+        for(let i = 0; i < arr.length; i++) {
+            sum = sum + arr[i];
+        }
+        return sum / arr.length;
+    }
+    </script>
+</body>
+</html>

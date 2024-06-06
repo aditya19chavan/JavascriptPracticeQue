@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//Write a function to calculate the factorial of a number.(using Recursion)
+
+
+//* Recursion:
+
+//? Recursion is a programming technique where a function calls itself in orderto solve a problem.
+
+
+const factorial = (num) => {
+    if (num === 1) {
+        return  1
+    } else {
+        return num * factorial(num - 1);
+    }
+};
+// 5=> 5 * (4 * (3 * (2 * (factorial(1))))
+console.log(factorial(5));
+    </script>
+</body>
+</html>

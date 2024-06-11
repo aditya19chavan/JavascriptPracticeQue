@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//Write a function called simplePasswordValidator that takes a single parameter:
+
+//password. This function should return true if the password is valid, and false 
+//otherwise. A password is considered valid if it meets the following criteria:
+//1. It is at least 8 characters long.
+//2. It contains at least one uppercase letter.
+//3. It contains at least one lowercase letter.
+//4. It contains at least one digit.
+
+
+
+const simplePasswordValidator = (password) => {
+
+
+let hasLowerCase = false;
+let hasUpperCase = false;
+let hasNumber = false;
+
+
+    for (let char of password) {
+       if (char.charCodeAt(0) >= 65 && char.charCodeAt(0) <= 90)
+       {
+        hasUpperCase = true;
+       } else if (char.charCodeAt(0) >= 97 && char.charCodeAt(0) <= 122) {
+        hasLowerCase = true;
+
+       } else if (!isNaN(Number(char))) {
+        hasNumber = true;
+       }
+    }
+    if (!hasLowerCase || !hasUpperCase || !hasNumber || password.length < 8) {
+        return false;
+    }
+    return true;
+};
+
+
+
+console.log(simplePasswordValidator("afdsfadsF1"));
+console.log(simplePasswordValidator("afdsfadsf1"));
+
+    </script>
+</body>
+</html>

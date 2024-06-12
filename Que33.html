@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//Random Hex Color Generator
+
+//Write a function randomHexColor that generates a random hexadecimal color  code each time it is called. The function should return a string representing the random color code in the format '#RRRGGBB'
+
+
+
+
+const randomHexColor = () => {
+  // Generate a random number between 0 and 255 for each color component
+
+const r = Math.floor(Math.random() * 256);
+const g = Math.floor(Math.random() * 256);
+const b = Math.floor(Math.random() * 256);
+
+
+ // Convert each component to a two-digit hexadecimal string
+ const rHex = r.toString(16).padStart(2, '0');
+ const gHex = g.toString(16).padStart(2, '0');
+ const bHex = b.toString(16).padStart(2, '0');
+
+ return `#${rHex}${gHex}${bHex}`;
+
+};
+
+console.log(randomHexColor());
+    </script>
+
+
+
+    <script>
+        //Method 2:
+        const randomHexColor1 = () => {
+    // Generate a random number, convert it to hexadecimal, and slice to get the required part
+    const hex = Math.random().toString(16).slice(2, 8);
+    // Ensure the length is 6 by padding with zeros if necessary
+    return `#${hex.padEnd(6, '0')}`;
+};
+
+console.log(randomHexColor1());  // e.g. '#a3b4c5'
+
+    </script>
+</body>
+</html>

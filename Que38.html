@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+// Number of Days between two dates
+
+
+//Write a function calculateDaysBetween dates that calculates the number of days between two dates. The dates will be provided in the format "YY-MM-DD".
+
+const calculateDaysBetween = (d1, d2) => {
+    let date1 = new Date(d1);
+    let date2 = new Date(d2);
+
+    let diff = Math.abs(date2 - date1);
+
+    return diff / (24 * 60 * 60 * 1000);
+};
+
+
+console.log(calculateDaysBetween ("2024-01-05", "2024-01-31"));
+    </script>
+</body>
+</html>
